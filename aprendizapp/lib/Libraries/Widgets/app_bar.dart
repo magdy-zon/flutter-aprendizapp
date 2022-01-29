@@ -10,7 +10,10 @@ PreferredSizeWidget app_bar(BuildContext context, String appBarTitle,
     leading: Visibility(
       visible: currentPage != 'home',
       child: IconButton(
-        icon: const Icon(Icons.arrow_back),
+        icon: const Icon(
+          Icons.arrow_back,
+          color: Colors.deepPurple,
+        ),
         color: Colors.black87,
         onPressed: () {
           if (popType == 'pop') {

@@ -1,4 +1,5 @@
 import 'package:aprendizapp/Pages/Home/home.dart';
+import 'package:aprendizapp/Pages/Login/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:aprendizapp/Libraries/Widgets/WidgetLibrary.dart';
 import 'package:sizer/sizer.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: theme,
         routes: {
-          '/': (context) => const Home(title: 'Home'),
+          '/': (context) => Login(),
         },
       );
     });
