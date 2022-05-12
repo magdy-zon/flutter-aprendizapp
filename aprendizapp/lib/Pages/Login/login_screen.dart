@@ -1,5 +1,4 @@
 import 'package:aprendizapp/Libraries/Globals/GlobalsLibrary.dart';
-import 'package:aprendizapp/Libraries/Widgets/WidgetLibrary.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
@@ -92,17 +91,24 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 30,
                   ),
-                  Container(
+                  SizedBox(
+                    width: double.infinity,
                     height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: secondaryColor,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Iniciar Sesión",
+                    child: ElevatedButton(
+                      child: const Text(
+                        'Iniciar sesión',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      onPressed: () {
+                        //still missing check login
+                        Navigator.pushNamed(context, '/home');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: secondaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
@@ -124,7 +130,7 @@ class _LoginState extends State<Login> {
                       style: ElevatedButton.styleFrom(
                         primary: secondaryColor,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12), // <-- Radius
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                     ),
