@@ -1,6 +1,7 @@
 import 'package:aprendizapp/Libraries/Globals/GlobalsLibrary.dart';
 import 'package:aprendizapp/Libraries/Widgets/WidgetLibrary.dart';
 import 'package:flutter/material.dart';
+import 'package:awesome_dialog/awesome_dialog.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar(context, 'Register', '', ''),
+      appBar: app_bar(context, 'Register', '', 'pop'),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -109,22 +110,50 @@ class _RegisterState extends State<Register> {
                   const SizedBox(
                     height: 30,
                   ),
-                  Container(
-                    height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: secondaryColor,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Siguiente",
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
+                  AnimatedButton(
+                    text: 'Siguiente',
+                    color: secondaryColor,
+                    borderRadius: BorderRadius.circular(12),
+                    buttonTextStyle: const TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                    pressEvent: () {
+                      AwesomeDialog(
+                        context: context,
+                        dialogType: DialogType.INFO_REVERSED,
+                        buttonsBorderRadius: const BorderRadius.all(
+                          Radius.circular(2),
+                        ),
+                        dismissOnTouchOutside: false,
+                        dismissOnBackKeyPress: false,
+                        headerAnimationLoop: false,
+                        animType: AnimType.BOTTOMSLIDE,
+                        desc:
+                            'Te hemos enviado un correo pero por ahora puedes continuar aquí',
+                        showCloseIcon: false,
+                        btnOk: SizedBox(
+                          width: double.infinity,
+                          height: 50,
+                          child: ElevatedButton(
+                            child: const Text(
+                              'Registrarme',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/consider');
+                            },
+                            style: ElevatedButton.styleFrom(
+                              primary: secondaryColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.circular(12), // <-- Radius
+                              ),
+                            ),
+                          ),
+                        ),
+                      ).show();
+                    },
                   ),
                 ],
               ),

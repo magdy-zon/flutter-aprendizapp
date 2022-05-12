@@ -12,7 +12,6 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: app_bar(context, 'Login', '', ''),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -110,17 +109,23 @@ class _LoginState extends State<Login> {
                   const SizedBox(
                     height: 10,
                   ),
-                  Container(
+                  SizedBox(
+                    width: double.infinity,
                     height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: secondaryColor,
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "Registrarme",
+                    child: ElevatedButton(
+                      child: const Text(
+                        'Registrarme',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/register');
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: secondaryColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12), // <-- Radius
+                        ),
                       ),
                     ),
                   ),
