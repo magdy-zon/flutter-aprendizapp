@@ -30,92 +30,110 @@ class _HomeState extends State<Home> {
               const SizedBox(
                 height: 20,
               ),
-              Card(
-                elevation: 1,
-                color: Colors.white, //secondaryColor,
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        width: double.infinity,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: secondaryColor,
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/imagen1.png'),
+              InkWell(
+                child: Card(
+                  elevation: 1,
+                  color: Colors.white, //secondaryColor,
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          width: double.infinity,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            color: secondaryColor,
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/imagen1.png'),
+                            ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Text(
-                          'Aprender a mirar el mundo',
-                          style: TextStyle(fontSize: 20, color: secondaryColor),
-                          textAlign: TextAlign.left,
-                        ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Text(
+                            'Aprender a mirar el mundo',
+                            style:
+                                TextStyle(fontSize: 20, color: secondaryColor),
+                            textAlign: TextAlign.left,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
+                onTap: () {
+                  print('eso mamona');
+                },
               ),
-              Card(
-                elevation: 1,
-                color: Colors.white, //secondaryColor,
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        width: double.infinity,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: secondaryColor,
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/imagen2.png'),
+              InkWell(
+                child: Card(
+                  elevation: 1,
+                  color: Colors.white, //secondaryColor,
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          width: double.infinity,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            color: secondaryColor,
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/imagen2.png'),
+                            ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Text(
-                          'Una herramienta para estudiar nuestro sistema',
-                          style: TextStyle(fontSize: 20, color: secondaryColor),
-                          textAlign: TextAlign.left,
-                        ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Text(
+                            'Una herramienta para estudiar nuestro sistema',
+                            style:
+                                TextStyle(fontSize: 20, color: secondaryColor),
+                            textAlign: TextAlign.left,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
+                onTap: () {
+                  print('eso');
+                },
               ),
-              Card(
-                elevation: 1,
-                color: Colors.white, //secondaryColor,
-                child: SizedBox(
-                  width: double.infinity,
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        width: double.infinity,
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: secondaryColor,
-                          image: const DecorationImage(
-                            image: AssetImage('assets/images/imagen3.png'),
+              InkWell(
+                child: Card(
+                  elevation: 1,
+                  color: Colors.white, //secondaryColor,
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          width: double.infinity,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            color: secondaryColor,
+                            image: const DecorationImage(
+                              image: AssetImage('assets/images/imagen3.png'),
+                            ),
                           ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(20),
-                        child: Text(
-                          'Reconocimiento de comportamiento',
-                          style: TextStyle(fontSize: 20, color: secondaryColor),
-                          textAlign: TextAlign.left,
-                        ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Text(
+                            'Reconocimiento de comportamiento',
+                            style:
+                                TextStyle(fontSize: 20, color: secondaryColor),
+                            textAlign: TextAlign.left,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
+                onTap: () {
+                  Navigator.pushNamed(context, '/menu/third');
+                },
               ),
             ],
           ),

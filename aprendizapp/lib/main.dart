@@ -2,7 +2,8 @@ import 'package:aprendizapp/Pages/Home/home.dart';
 import 'package:aprendizapp/Pages/Login/login_screen.dart';
 import 'package:aprendizapp/Pages/Login/register_screen.dart';
 import 'package:aprendizapp/Pages/Login/consider_screen.dart';
-import 'package:aprendizapp/Pages/Home/home.dart';
+import 'package:aprendizapp/Pages/Activities/MenuActivities/menu_activities_3.dart';
+import 'package:aprendizapp/Pages/Activities/ActivityThird/activity_third.dart';
 import 'package:flutter/material.dart';
 import 'package:aprendizapp/Libraries/Widgets/WidgetLibrary.dart';
 import 'package:sizer/sizer.dart';
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
           '/register': (context) => const Register(),
           '/consider': (context) => const Consider(),
           '/home': (context) => const Home(),
+          //activities
+          '/menu/third': (context) => const MenuActivityThird(),
+          '/activity/third': (context) => const ActivityThird()
         },
       );
     });
